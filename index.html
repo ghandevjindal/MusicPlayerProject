@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="heading">
+        <h1>Music Player</h1>
+        <label class="switch">
+            <input type="checkbox" id="theme-toggle">
+            <span class="slider round"></span>
+            <span class="toggle-text">Dark</span>
+        </label>
+    </div>
+    <div id="container">
+        <div id="All-song">
+            <div id="filter">
+                <label for="genre-select">Filter by Genre:</label>
+                <select id="genre-select">
+                    <option value="All">All</option>
+                    <option value="Hip Hop">Hip Hop</option>
+                    <option value="Rock">Rock</option>
+                    <option value="Pop">Pop</option>
+                </select>
+            </div>
+            <h2>All Songs</h2>
+            <div id="song-search">
+                <input type="text" id="song-search-input" placeholder="Search Songs..." />
+            </div>
+            <div id="song-list">
+            </div>
+        </div>
+
+        <div id="song-card">
+            <div id="song-card-content">
+                <img id="song-image" src="" />
+                <h3 id="song-name"></h3>
+                <p id="song-artist"></p>
+            </div>
+            <div id="song-audio">
+                <audio id="audio-player" controls>
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div id="song-nav">
+                <button id="prev-song" onclick="changeSong('prev')"><=</button>
+                <button id="next-song" onclick="changeSong('next')">=> </button>
+            </div>
+            <button id="add-to-playlist">Add to Playlist</button>
+        </div>
+
+        <div id="playlist">
+            <div id="add_playlist">
+            <input type="text" id="input_playlist" placeholder="Enter Playlist Name">
+            <button id="create_playlist_btn">Create Playlist</button>
+            </div>
+            <div id="view_playlist">
+                <div id="current_playlist">
+                    <h3>Current Playlist</h3>
+                </div>
+                <div id="all_playlists">
+                    <h3>All Playlists</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
